@@ -19,3 +19,24 @@ document.querySelector("#newBlog").addEventListener("submit",e=>{
         }
     })
 })
+
+document.querySelector("#newBlog").addEventListener("deleteBtn", e =>{
+    e.preventDefault()
+    const blogObj = {
+        title:document.querySelector("#title").value,
+        body:document.querySelector("#body").value,
+    }
+    fetch("/api/blogs/:id", {
+        method:"DELETE",
+        body:JSON.stringify(blogObj),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    }).then(res=>{
+        if(res.ok){
+           location.reload()
+        } else {
+            alert("trumpet sound")
+        }
+    })
+})
