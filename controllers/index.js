@@ -27,3 +27,5 @@ router.get("/secretclub",(req,res)=>{
     }
     res.json({msg:`welcome to the club ${req.session.user.username}`})
 })
+
+module.exports = router;

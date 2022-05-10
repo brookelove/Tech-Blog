@@ -23,11 +23,12 @@ document.querySelector("#login").addEventListener("submit",e=>{
 
 document.querySelector("#signup").addEventListener("submit",e=>{
     e.preventDefault();
+
     const userObj = {
         username:document.querySelector("#signupUsername").value,
         password:document.querySelector("#signupPassword").value,
     }
-    console.log(userObj)
+    console.log('USER: ', userObj);
     fetch("/api/users/",{
         method:"POST",
         body:JSON.stringify(userObj),

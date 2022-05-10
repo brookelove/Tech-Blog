@@ -18,7 +18,7 @@ const users = [
 
 const blogs = [
     {
-        title:"i loke to chew on shoes ",
+        title:"i like to chew on shoes ",
         body:"My mom's shoes are yummy!",
         UserId:1
     },
