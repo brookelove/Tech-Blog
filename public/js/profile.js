@@ -36,13 +36,14 @@ document.querySelector("#deleteBTN").addEventListener("click", e =>{
     })
 })
 
-document.querySelector("#newBlog").addEventListener("update", e =>{
+document.querySelector("#updateBTN").addEventListener("click", e =>{
     e.preventDefault()
+    const post = e.target.value;
     const blogObj = {
         title:document.querySelector("#title").value,
         body:document.querySelector("#body").value,
     }
-    fetch("/api/blogs/:id", {
+    fetch(`/api/blogs/${post}`, {
         method:"UPDATE",
         body:JSON.stringify(blogObj),
         headers:{
