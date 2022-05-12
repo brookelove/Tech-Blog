@@ -39,7 +39,7 @@ document.querySelector("#signup").addEventListener("submit",e=>{
         if(res.ok){
             location.href="/profile"
         } else {
-            alert("trumpet sound")
+            alert("Username or password was entered wrong! Try again!")
         }
     })
 })
