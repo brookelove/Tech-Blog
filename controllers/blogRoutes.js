@@ -1,11 +1,14 @@
 const express =require ("express");
 const router = express.Router();
-const {User, Blog} = require ("../models");
+const {User, Blog, Comment} = require ("../models");
 
 // Find all blogs 
 router.get("/", (req,res) => {
-    Blog.findAll({})
+    Blog.findAll({ 
+      include:Comment
+    })
     .then (dbBlogs => {
+      console.log(dbBlogs)
         res.json(dbBlogs);
     })
     .catch (err => {
@@ -38,7 +41,7 @@ router.post("/", (req, res) => {
       body:req.body.body,
       UserId:req.session.user.id
     })
-    // json the response to cereate a new blog 
+    // json the response to create a new blog 
       .then(newBlog => {
         res.json(newBlog);
       })
@@ -78,5 +81,29 @@ router.delete("/:id", (req, res) => {
       res.status(500).json({ msg: "an error occured", err });
     });
   });
-  
+
+  router.post("/comment", (req, res) => {
+    // if use is not logged in return this response
+    if(!req.session.user){
+      return res.status(401).json({msg:"You have to log in to use me!"})
+  }
+    Comment.create({
+      // take in the information of the parameters
+    blogId:req.body.id,
+    body:req.body.body,
+    UserId:req.session.user.id
+  })
+  // json the response to cereate a new blog 
+    .then(newComment => {
+      console.log(newComment)
+      res.json(newComment);
+    })
+    
+  //   if creating the blog does not return this error
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ msg: "an error occured", err });
+    });
+    
+})
   module.exports = router;

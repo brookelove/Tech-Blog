@@ -60,28 +60,3 @@ document.querySelector("#updateBTN").addEventListener("click", e =>{
         }
     })
 })
-
-document.querySelector("#commentBTN").addEventListener("click", e =>{
-    e.preventDefault()
-    const post = e.target.value;
-    const commentObj = {
-        title: title.value,
-        body: body.value,
-    }
-    fetch(`/api/blogs/${post}`, {
-        method:"POST",
-        body:JSON.stringify(commentObj),
-        headers:{
-            "Content-Type":"application/json"
-        }
-    }).then(res=>{
-        if(res.ok){
-            const newCommentTitle = document.createElement('h6');
-            const newCommentPara = document.createElement('p');
-            newCommentTitle = setAttrbute('')
-           location.reload()
-        } else {
-            alert("trumpet sound")
-        }
-    })
-})

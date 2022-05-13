@@ -16,4 +16,4 @@ Blog.init({
     sequelize
 });
 
-module.exports = Blog
+module.exports = Blog;
