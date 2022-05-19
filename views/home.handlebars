@@ -8,6 +8,10 @@
     <button id="commentBTN" value={{id}}>comment</button>
 </div>
 {{/each}}
-
+{{#each comments}} 
+<div id={{id}}>
+    <p>{{body}}</p>
+</div>
+{{/each}}
  {{!-- foreach (item, idx)  --}}
  <script src="/js/home.js"></script>

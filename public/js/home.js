@@ -14,11 +14,10 @@ document.querySelector("#commentBTN").addEventListener("click", e =>{
             "Content-Type":"application/json"
         }
     }).then(res=>{
-        if(res.ok){
-            
-           location.reload()
+        if(res.ok) {
+           res.render('comment', hbsBlog)
         } else {
-            alert("trumpet sound")
+            alert("error happened")
         }
     })
 })

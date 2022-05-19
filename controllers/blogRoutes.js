@@ -91,7 +91,7 @@ router.delete("/:id", (req, res) => {
       // take in the information of the parameters
     blogId:req.body.id,
     body:req.body.body,
-    UserId:req.session.user.id
+    userId:req.session.user.id
   })
   // json the response to cereate a new blog 
     .then(newComment => {

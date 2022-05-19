@@ -14,7 +14,7 @@ document.querySelector("#login").addEventListener("submit",e=>{
         }
     }).then(res=>{
         if(res.ok){
-            location.href="/profile"
+            location.href="/"
         } else {
             alert("trumpet sound")
         }
@@ -37,7 +37,7 @@ document.querySelector("#signup").addEventListener("submit",e=>{
         }
     }).then(res=>{
         if(res.ok){
-            location.href="/profile"
+            location.href="/"
         } else {
             alert("Username or password was entered wrong! Try again!")
         }
