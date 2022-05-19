@@ -94,9 +94,11 @@ router.delete("/:id", (req, res) => {
     userId:req.session.user.id
   })
   // json the response to cereate a new blog 
-    .then(newComment => {
-      console.log(newComment)
-      res.json(newComment);
+    .then(comments => {
+      console.log(comments)
+      const hbsComments = comments.get({plain:true});
+      // send context through this to get data 
+      res.render("home", {comments: hbsComments})
     })
     
   //   if creating the blog does not return this error

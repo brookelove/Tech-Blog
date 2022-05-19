@@ -13,6 +13,13 @@ router.get("/",(req,res)=>{
         const loggedIn = req.session.user?true:false
         res.render("home",{blogs:hbsBlogs,loggedIn,username:req.session.user?.username})
     })
+    // .then (comments => {
+    //     console.log(comments)
+    //     const hbsComments = comments.get({plain:true});
+    //     console.log(hbsComments);
+    //     const loggedIn = req.session.user?true:false;
+    //     res.render("home", )
+    // })
 })
 
 router.get("/login",(req,res)=>{
