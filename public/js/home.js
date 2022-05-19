@@ -1,4 +1,4 @@
-document.querySelector("#commentBTN").addEventListener("click", e =>{
+document.querySelectorAll("#commentBTN").addEventListener("click", e =>{
     e.preventDefault()
     const post = e.target.value;
     const commentObj = {

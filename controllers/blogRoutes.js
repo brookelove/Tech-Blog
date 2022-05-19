@@ -85,7 +85,7 @@ router.delete("/:id", (req, res) => {
   router.post("/comment", (req, res) => {
     // if use is not logged in return this response
     if(!req.session.user){
-      return res.status(401).json({msg:"You have to log in to use me!"})
+      return res.status(401).json({msg:"You have to login to use me!"})
   }
     Comment.create({
       // take in the information of the parameters

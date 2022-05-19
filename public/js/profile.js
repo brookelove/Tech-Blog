@@ -1,12 +1,9 @@
-let title = document.querySelector("#title");
-let body = document.querySelector("#body")
-
 console.log("hello")
-document.querySelector("#newBlog").addEventListener("submit", e=>{
+document.querySelector("#newBlog").addEventListener("submit",e=>{
     e.preventDefault()
     const blogObj = {
-        title: title.value,
-        body:body.value,
+        title:document.querySelector("#title").value,
+        body:document.querySelector("#body").value,
     }
     fetch("/api/blogs",{
         method:"POST",
