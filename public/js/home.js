@@ -15,7 +15,7 @@ document.querySelectorAll("#commentBTN").addEventListener("click", e =>{
         }
     }).then(res=>{
         if(res.ok) {
-           res.render('comment', hbsBlog)
+           res.render()
         } else {
             alert("error happened")
         }
