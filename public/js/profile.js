@@ -59,7 +59,7 @@ updateBTNS.forEach ((el) => {
             }
         }).then(res=>{
             if(res.ok){
-               location.reload()
+               location.reload('profile')
             } else {
                 alert("trumpet sound")
             }

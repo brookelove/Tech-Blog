@@ -20,17 +20,17 @@ const blogs = [
     {
         title:"i like to chew on shoes ",
         body:"My mom's shoes are yummy!",
-        UserId:1
+        userId:1
     },
     {
         title:"I like to watch my sister get in trouble",
         body:"I love my sister but it is funny when she gets in trouble because that means mom gives me more belly rubs ",
-        UserId:1
+        userId:1
     },
     {
         title:"I love naps",
         body:"Napping is the most imprtant meal of the day",
-        UserId:2
+        userId:2
     }
 ]
 

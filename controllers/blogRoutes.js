@@ -89,11 +89,12 @@ router.delete("/:id", (req, res) => {
   }
     Comment.create({
       // take in the information of the parameters
-    blogId:req.body.id,
+    blogId:req.body.blogId,
     body:req.body.body,
     userId:req.session.user.id
   })
     .then(newComment => {
+      console.log(newComment)
       res.json(newComment);
     })
     

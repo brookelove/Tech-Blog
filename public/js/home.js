@@ -3,8 +3,9 @@ commentBTNS.forEach((el)=>{
     el.addEventListener("click", e =>{
         e.preventDefault()
         const post = e.target.value;
+        console.log(post);
         const commentObj = {
-            blogid: post,
+            blogId: parseInt(post),
             body: document.querySelector("#comment").value,
         }
         console.log(post);
@@ -18,7 +19,7 @@ commentBTNS.forEach((el)=>{
         }).then(res=>{
             if(res.ok) {
                 // try parsing the object 
-                location.reload()
+                 location.reload()
             } else {
                 alert("error happened")
             }
