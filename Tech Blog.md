@@ -31,17 +31,25 @@
 
 # Install Instructions
 
-    1. You will need to clone the repo 2. Then you will need to run inside the the termial of you file >npm i to download tall of the installation 3. You will need to create a .denv file inside of the main area it will need to have the user and password of your mysql data 4. then you would need to run the seeds using >npm run seed 4. After running the seeds run inside of the terminal npm run start 
+    1. You will need to clone the repo 
+    2. Then you will need to run inside the the termial of you file
+    > npm i to download tall of the installation 
+    3. You will need to create a .denv file inside of the main area it will need to have the user and password of your mysql data 
+    4. then you would need to run the seeds using 
+    > npm run seed 
+    5. After running the seeds run inside of the terminal npm run start 
 
 # Usage
 
     I am using this app to communcate to thers through reviews and blogs that they want to post
 
-# Mock Up
+# Mock Up and Links
 
 ![Image of Tech Blog](../assets/tech-blog.img)
 
 ![Gif of Tech Blog](../assets/tech-blog.gif)
+
+[Link to Website](https://serene-cove-08175.herokuapp.com/)
 
 # Future
 
